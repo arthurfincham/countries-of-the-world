@@ -10,10 +10,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.formArea {
-  margin-top: 2em;
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
 }
 
-.svgWrapper {
-  border: 2px solid green;
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media screen and (max-width: 1100px) {
+  .App {
+    flex-direction: column;
+  }
 }
