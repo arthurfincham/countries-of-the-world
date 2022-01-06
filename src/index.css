@@ -13,3 +13,7 @@ code {
 .formArea {
   margin-top: 2em;
 }
+
+.svgWrapper {
+  border: 2px solid green;
+}

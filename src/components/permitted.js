@@ -142,7 +142,6 @@ export const permittedAnswers = [
   'Moldova',
   'Madagascar',
   'Montenegro',
-  'Saint',
   'Marshall Islands',
   'Macedonia',
   'Mali',

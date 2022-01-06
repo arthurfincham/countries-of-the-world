@@ -17,7 +17,9 @@ export default function InputForm() {
 
   useEffect(() => {
     knownCountries.map((item) => {
-      document.querySelector(`[title="${item}"]`).style.fill = '#FA8F02';
+      if (document.querySelector(`[title="${item}"]`)) {
+        document.querySelector(`[title="${item}"]`).style.fill = '#FA8F02';
+      }
     });
   });
 
@@ -29,8 +31,8 @@ export default function InputForm() {
       </div>
 
       <ul className="countriesList">
-        {knownCountries.map((country) => {
-          return <li>{country}</li>;
+        {knownCountries.sort().map((country) => {
+          return <li key={country}>{country}</li>;
         })}
       </ul>
     </div>
