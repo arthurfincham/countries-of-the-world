@@ -2,7 +2,7 @@ import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 export default function Map() {
   return (
-    <TransformWrapper maxScale={20} minScale={0.8} centerZoomedOut={true} pinchStep={1} initialScale={0.8} wrapperClass="svgMapWrapper">
+    <TransformWrapper maxScale={20} minScale={0.8} centerZoomedOut={true} pinchStep={1} initialScale={0.8}>
       <TransformComponent>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-119.110266 83.600842 1009 -58.508473" width="1009" height="665">
           <path
