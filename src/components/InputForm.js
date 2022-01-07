@@ -19,6 +19,10 @@ export default function InputForm({ knownCountries, setKnownCountries }) {
     }
   };
 
+  const checkKeyDown = (e) => {
+    if (e.code === 'Enter') e.preventDefault();
+  };
+
   useEffect(() => {
     knownCountries.map((item) => {
       if (document.querySelector(`[title="${item}"]`)) {
@@ -30,7 +34,7 @@ export default function InputForm({ knownCountries, setKnownCountries }) {
   return (
     <Paper sx={{ height: '630px', padding: '1em', width: '25%' }}>
       <Paper component="form" sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '95%' }}>
-        <InputBase sx={{ flex: 1 }} placeholder="Country" onChange={(e) => checkAnswer(e)} />
+        <InputBase sx={{ flex: 1 }} placeholder="Country" onChange={(e) => checkAnswer(e)} onKeyDown={(e) => checkKeyDown(e)} />
       </Paper>
 
       <Grid sx={{ marginTop: '20px', width: '100%', display: 'flex', flexWrap: 'wrap' }}>
