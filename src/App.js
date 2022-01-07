@@ -8,7 +8,7 @@ import NavBar from './components/NavBar';
 import { permittedAnswers } from './components/permitted';
 import { Main } from './components/muiStyled/styledMain';
 import { inputStandard } from './components/inputFunctions/inputStandard';
-import InputBase from '@mui/material/InputBase';
+import TextField from '@mui/material/TextField';
 import DrawerContent from './components/DrawerContent';
 
 function App() {
@@ -57,12 +57,13 @@ function App() {
     <div className="App">
       <AppWrapper>
         <NavBar open={open} handleDrawerOpen={handleDrawerOpen} drawerWidth={drawerWidth}>
-          <InputBase
+          <TextField
+            key="12"
             sx={{ flex: 1 }}
             placeholder="Country"
             onChange={(e) => checkAnswer(e)}
             onKeyDown={(e) => checkKeyDown(e)}
-            sx={{ backgroundColor: 'white', width: '400px', padding: '.3em .5em', borderRadius: '5px' }}
+            sx={{ backgroundColor: 'white', width: '400px', borderRadius: '5px' }}
           />
         </NavBar>
         <DrawerContent handleDrawerClose={handleDrawerClose} drawerWidth={drawerWidth} open={open} knownCountries={knownCountries} />

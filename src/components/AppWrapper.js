@@ -4,7 +4,17 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 export default function AppWrapper({ children }) {
   return (
-    <Box sx={{ display: 'flex', width: '100%', height: '100%', alignItems: 'center', marginTop: '40px' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+        alignItems: 'center',
+        marginTop: '40px',
+        backgroundColor: '#EBEBEB',
+        justifyContent: 'center',
+      }}
+    >
       <CssBaseline />
       {children}
     </Box>
