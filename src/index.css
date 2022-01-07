@@ -14,7 +14,7 @@ code {
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 95%;
   height: 100vh;
   align-items: center;
   justify-content: space-evenly;
@@ -25,9 +25,9 @@ code {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1100px) {

@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Paper sx={{ display: 'flex' }}>
+      <Paper sx={{ display: 'flex', width: '90%', justifyContent: 'space-evenly', padding: '1em' }}>
         <ProgressCircle name="Europe" knownCountries={knownCountries} />
         <ProgressCircle name="Africa" knownCountries={knownCountries} />
         <ProgressCircle name="North America" knownCountries={knownCountries} />
