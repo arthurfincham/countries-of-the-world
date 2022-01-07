@@ -14,7 +14,7 @@ function App() {
         </Paper>
         <InputForm knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
       </div>
-      <ProgressBar knownCountries={knownCountries} />
+      {/* <ProgressBar knownCountries={knownCountries} /> */}
     </div>
   );
 }

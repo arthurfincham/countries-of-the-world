@@ -4,7 +4,7 @@ import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgr
 
 import { styled } from '@mui/material/styles';
 
-export default function ProgressBar({ knownCountries }) {
+export default function ProgressBar({ permittedAnswers }) {
   const normalise = (value) => ((value - 0) * 100) / (265 - 0);
 
   const Bar = styled(LinearProgress)(() => ({
@@ -20,7 +20,7 @@ export default function ProgressBar({ knownCountries }) {
   }));
   return (
     <Box sx={{ width: '80%' }}>
-      <Bar variant="determinate" value={normalise(knownCountries.length)} />
+      <Bar variant="determinate" value={normalise(permittedAnswers.filter((e) => e.selected === true).length)} />
     </Box>
   );
 }
