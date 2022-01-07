@@ -1,10 +1,9 @@
+import { permittedAnswers } from './permitted';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-
 import CircularProgress, { circularProgressClasses } from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
-import { permittedAnswers } from './permitted';
 
 export default function ProgressBar({ name, knownCountries }) {
   const maxVal = permittedAnswers.filter((e) => e.continent === name).length;
@@ -13,7 +12,13 @@ export default function ProgressBar({ name, knownCountries }) {
   return (
     <Paper elevation={0} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100px' }}>
       <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-        <CircularProgress variant="determinate" value={normalise(currentVal)} />
+        <CircularProgress
+          size={70}
+          variant="determinate"
+          value={normalise(currentVal)}
+          sx={{ color: '#FA8F02', zIndex: 2, strokeLinecap: 'round' }}
+        />
+        <CircularProgress variant="determinate" size={70} value={100} sx={{ position: 'absolute', left: '0', color: '#EBEBEB', zIndex: 1 }} />
         <Box
           sx={{
             top: 0,

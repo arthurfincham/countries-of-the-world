@@ -36,10 +36,6 @@ code {
   }
 }
 
-.MuiCircularProgress-circle {
-  fill: rgb(238, 238, 238) !important;
-}
-
 .mapSVG {
   transform: scale(0.7);
 }
@@ -47,9 +43,13 @@ code {
 .progressBar {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
   width: 95%;
   margin: 0 auto;
   margin-bottom: 1em;
   padding: 1.2em 0;
+}
+
+path {
+  stroke: white;
+  stroke-width: 0.005em;
 }
