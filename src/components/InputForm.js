@@ -10,7 +10,7 @@ export default function InputForm({ knownCountries, setKnownCountries }) {
   const checkAnswer = (e) => {
     if (e.target.value.length > 1) {
       const string = inputStandard(e.target.value);
-      if (permittedAnswers.includes(string)) {
+      if (permittedAnswers.some((e) => e.country === string)) {
         e.preventDefault();
         setKnownCountries([...knownCountries, string]);
         permittedAnswers.splice(permittedAnswers.indexOf(string), 1);
