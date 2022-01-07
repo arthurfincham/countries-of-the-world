@@ -20,7 +20,7 @@ function App() {
         <ProgressCircle name="Middle East" knownCountries={knownCountries} />
       </Paper>
       <div className="flex-row">
-        <Paper>
+        <Paper sx={{ width: '810px', height: '530px', overflow: 'hidden' }}>
           <Map />
         </Paper>
         <InputForm knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
