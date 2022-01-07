@@ -1,5 +1,4 @@
 import Map from './components/Map';
-import InputForm from './components/InputForm';
 import ProgressBar from './components/ProgressBar';
 import AppWrapper from './components/AppWrapper';
 import Paper from '@mui/material/Paper';
