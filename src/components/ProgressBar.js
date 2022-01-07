@@ -1,26 +1,20 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-
-import { styled } from '@mui/material/styles';
-
+import ProgressCircle from './ProgressCircle';
+import ProgressTotal from './ProgressTotal';
 export default function ProgressBar({ knownCountries }) {
-  const normalise = (value) => ((value - 0) * 100) / (265 - 0);
-
-  const Bar = styled(LinearProgress)(() => ({
-    height: 10,
-    borderRadius: 5,
-    [`&.${linearProgressClasses.colorPrimary}`]: {
-      backgroundColor: '#FAD19C',
-    },
-    [`& .${linearProgressClasses.bar}`]: {
-      borderRadius: 5,
-      backgroundColor: '#FA8F02',
-    },
-  }));
   return (
-    <Box sx={{ width: '80%' }}>
-      <Bar variant="determinate" value={normalise(knownCountries.filter((e) => e.picked === true).length)} />
-    </Box>
+    <div className="progressBarWrapper">
+      <div className="progressBar">
+        <ProgressCircle name="Africa" knownCountries={knownCountries} />
+        <ProgressCircle name="Asia" knownCountries={knownCountries} />
+        <ProgressCircle name="Europe" knownCountries={knownCountries} />
+        <ProgressCircle name="Middle East" knownCountries={knownCountries} />
+      </div>
+      <div className="progressBar">
+        <ProgressCircle name="North America" knownCountries={knownCountries} />
+        <ProgressCircle name="Oceania" knownCountries={knownCountries} />
+        <ProgressCircle name="South America" knownCountries={knownCountries} />
+        <ProgressTotal knownCountries={knownCountries} />
+      </div>
+    </div>
   );
 }

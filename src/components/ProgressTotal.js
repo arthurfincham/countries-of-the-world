@@ -10,8 +10,8 @@ export default function ProgressTotal({ knownCountries }) {
   const normalise = (value) => ((value - 0) * 100) / (maxVal - 0);
   let currentVal = knownCountries.length;
   return (
-    <Paper elevation={0} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100px' }}>
-      <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+    <Paper elevation={1} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100px' }}>
+      <Box sx={{ position: 'relative', display: 'inline-flex', marginTop: '10px' }}>
         <CircularProgress
           size={70}
           variant="determinate"
@@ -36,7 +36,7 @@ export default function ProgressTotal({ knownCountries }) {
           </Typography>
         </Box>
       </Box>
-      <Typography variant="caption" component="div" color="text.secondary">
+      <Typography variant="caption" component="div" color="text.secondary" sx={{ marginTop: '5px' }}>
         Total
       </Typography>
     </Paper>

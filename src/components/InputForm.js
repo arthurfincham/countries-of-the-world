@@ -37,12 +37,12 @@ export default function InputForm({ knownCountries, setKnownCountries }) {
   };
 
   return (
-    <Paper sx={{ height: '100%', width: '500px', padding: '1em', boxSizing: 'border-box', margin: '0 10px' }}>
+    <Paper sx={{ height: '95%', width: '500px', padding: '1em', boxSizing: 'border-box' }}>
       <Paper component="form" sx={{ padding: '2px 4px', display: 'flex', alignItems: 'center', width: '90%' }}>
         <InputBase sx={{ flex: 1 }} placeholder="Country" onChange={(e) => checkAnswer(e)} onKeyDown={(e) => checkKeyDown(e)} />
       </Paper>
 
-      <Grid sx={{ marginTop: '20px', width: '100%', display: 'flex', flexWrap: 'wrap' }}>
+      <Grid sx={{ marginTop: '20px', width: '100%', display: 'flex', flexWrap: 'wrap', overflowY: 'scroll', maxHeight: '90%' }}>
         {knownCountries
           .filter((e) => e.picked === true)
           .sort()

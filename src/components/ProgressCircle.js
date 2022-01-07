@@ -5,13 +5,13 @@ import Paper from '@mui/material/Paper';
 import CircularProgress, { circularProgressClasses } from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 
-export default function ProgressBar({ name, knownCountries }) {
+export default function ProgressCircle({ name, knownCountries }) {
   const maxVal = permittedAnswers.filter((e) => e.continent === name).length;
   const normalise = (value) => ((value - 0) * 100) / (maxVal - 0);
   let currentVal = knownCountries.filter((e) => e.continent === name).length;
   return (
-    <Paper elevation={0} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100px' }}>
-      <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+    <Paper elevation={1} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100px' }}>
+      <Box sx={{ position: 'relative', display: 'inline-flex', marginTop: '10px' }}>
         <CircularProgress
           size={70}
           variant="determinate"
@@ -36,7 +36,7 @@ export default function ProgressBar({ name, knownCountries }) {
           </Typography>
         </Box>
       </Box>
-      <Typography variant="caption" component="div" color="text.secondary">
+      <Typography variant="caption" component="div" color="text.secondary" sx={{ marginTop: '5px' }}>
         {name}
       </Typography>
     </Paper>

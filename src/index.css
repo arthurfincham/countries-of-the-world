@@ -13,11 +13,11 @@ code {
 .App {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 95%;
   height: 100vh;
-  align-items: flex-start;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 
@@ -42,14 +42,24 @@ code {
 
 .progressBar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  width: 95%;
-  margin: 0 auto;
+  margin: 1em;
   margin-bottom: 1em;
   padding: 1.2em 0;
+}
+
+.progressBarWrapper {
+  display: flex;
 }
 
 path {
   stroke: white;
   stroke-width: 0.005em;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
 }
