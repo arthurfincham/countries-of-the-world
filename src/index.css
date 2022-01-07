@@ -35,3 +35,7 @@ code {
     flex-direction: column;
   }
 }
+
+.MuiCircularProgress-circle {
+  fill: rgb(238, 238, 238) !important;
+}
