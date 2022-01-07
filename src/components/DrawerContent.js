@@ -38,7 +38,7 @@ export default function DrawerContent({ handleDrawerClose, drawerWidth, open, kn
         <IconButton onClick={handleDrawerClose}>{theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}</IconButton>
       </DrawerHeader>
       <Divider />
-      <Grid sx={{ marginTop: '10px', width: '100%', display: 'flex', flexWrap: 'wrap', maxHeight: '90%', padding: '.21em' }}>
+      <Grid sx={{ marginTop: '10px', width: '100%', display: 'flex', flexWrap: 'wrap', maxHeight: '90%', padding: '0 1em' }}>
         {knownCountries
           .filter((e) => e.picked === true)
           .sort()
