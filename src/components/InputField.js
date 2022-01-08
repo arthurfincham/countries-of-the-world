@@ -21,5 +21,13 @@ export default function InputField({ knownCountries, setKnownCountries }) {
     if (e.code === 'Enter') e.preventDefault();
   };
 
-  return <input type="text" placeholder="Country" onChange={(e) => checkAnswer(e)} onKeyDown={(e) => checkKeyDown(e)} />;
+  return (
+    <input
+      type="text"
+      placeholder="Country"
+      onChange={(e) => checkAnswer(e)}
+      onKeyDown={(e) => checkKeyDown(e)}
+      className="border-4 border-black w-1/2 h-[50px] p-4 rounded-lg"
+    />
+  );
 }

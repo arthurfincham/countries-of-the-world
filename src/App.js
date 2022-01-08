@@ -18,9 +18,15 @@ function App() {
 
   return (
     <div className="App">
-      <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
-      <List knownCountries={knownCountries} />
-      <Map />
+      <div className="flex flex-col">
+        <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
+        <div className="border-4 w-[820px] h-[550px] overflow-hidden">
+          <Map />
+        </div>
+      </div>
+      <div className="flex flex-col flex-wrap border-4 w-1/2 p-4 pr-0 h-full">
+        <List knownCountries={knownCountries} />
+      </div>
     </div>
   );
 }
