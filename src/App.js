@@ -2,6 +2,8 @@ import Map from './components/Map';
 import { useState, useEffect } from 'react';
 import InputField from './components/InputField';
 import Progress from './components/Progress';
+import ReactTooltip from 'react-tooltip';
+
 function App() {
   const [knownCountries, setKnownCountries] = useState([]);
 
@@ -11,12 +13,17 @@ function App() {
       .map((item) => {
         if (document.querySelector(`[title="${item.country}"]`)) {
           document.querySelector(`[title="${item.country}"]`).style.fill = '#FA8F02';
+          const country = document.querySelector(`[title="${item.country}"]`);
+          country.setAttribute('data-tip', item.country);
+          ReactTooltip.rebuild();
         }
       });
   });
 
   return (
     <div className="relative flex flex-row App">
+      <ReactTooltip />
+
       <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
       <Map />
       <Progress knownCountries={knownCountries} />
