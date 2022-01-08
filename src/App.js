@@ -19,18 +19,18 @@ function App() {
   });
 
   return (
-    <div className="flex flex-row App">
-      <div className="flex-1 h-full bg-red-200"></div>
+    <div className="flex flex-row border-4 App border-red">
+      {/* <div className="flex-1 h-full bg-red-200"></div>
       <div className="flex flex-col h-full">
         <div className="flex-1 w-full bg-red-300"></div>
         <div className="border-2 border-black m-2 rounded-xl w-[820px] h-[550px] overflow-hidden shadow-md relative bg-orange-50">
-          <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
-          <Map />
-          <Progress knownCountries={knownCountries} />
+          <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} /> */}
+      <Map />
+      {/* <Progress knownCountries={knownCountries} />
         </div>
         <div className="flex-1 w-full bg-red-400"></div>
       </div>
-      <div className="flex-1 h-full bg-red-100"></div>
+      <div className="flex-1 h-full bg-red-100"></div> */}
 
       {/* {permittedAnswers
         // .filter((e) => e.picked === true)
