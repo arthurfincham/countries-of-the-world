@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="relative flex flex-row App">
-      <ReactTooltip />
+      <ReactTooltip className="tooltip" />
 
       <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
       <Map />

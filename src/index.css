@@ -38,3 +38,19 @@ path {
   stroke: white;
   stroke-width: 0.01em;
 }
+
+.svgtext {
+  color: red;
+  fill: red;
+  z-index: 100;
+}
+
+.label-text {
+  fill: black;
+  width: 50%;
+  font-size: 0.2em;
+}
+
+.tooltip {
+  padding: 0.5em 0.8em !important;
+}
