@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 body {
   margin: 0;
@@ -24,7 +24,6 @@ body,
 
 .App {
   display: flex;
-  border: 4px solid red;
   align-items: center;
   justify-content: center;
 }
@@ -35,10 +34,7 @@ body,
   width: 100% !important;
 }
 
-.react-transform-wrapper {
-  border: 10px solid green;
-}
-
-svg {
-  border: 2px solid blue;
+path {
+  stroke: white;
+  stroke-width: 0.01em;
 }

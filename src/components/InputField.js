@@ -26,7 +26,7 @@ export default function InputField({ knownCountries, setKnownCountries }) {
       placeholder="Country"
       onChange={(e) => checkAnswer(e)}
       onKeyDown={(e) => checkKeyDown(e)}
-      className="border-2 border-black bg-white  h-[50px] p-4 rounded-lg focus:outline-none   m-2 absolute z-10 "
+      className="border-2 border-black bg-white  h-[50px] p-4 rounded-lg focus:outline-none top-2 left-2  m-2 absolute z-10 "
     />
   );
 }

@@ -1,16 +1,15 @@
 export default function Progress({ knownCountries }) {
   const percent = Math.round((knownCountries.length / 205) * 100);
   const progressWidth = {
-    width: `${percent}%`,
-    minWidth: '3%',
+    height: `${percent}%`,
+    minHeight: '4%',
   };
   return (
-    <div className="absolute bottom-0 w-full">
-      <div className="h-7 shadow-md bg-gray-100 m-2  rounded-lg overflow-hidden relative border-2 border-black ">
-        <div className="h-6 text-right bg-orange-900 rounded-r-lg " style={progressWidth}>
-          <span className="text-white font-bold p-2 ">{`${knownCountries.length}`}</span>
+    <div className="absolute h-[95%] right-4">
+      <div className="relative w-8 h-full bg-gray-100 border-2 border-black rounded-lg">
+        <div style={progressWidth} className="absolute bottom-0 block w-full pt-1 font-bold text-center text-white bg-orange-900 rounded-md">
+          {knownCountries.length}
         </div>
-        <span className="absolute right-0 italic top-0 text-orange-900 font-bold mx-2">205</span>
       </div>
     </div>
   );
