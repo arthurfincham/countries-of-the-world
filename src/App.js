@@ -2,8 +2,9 @@ import Map from './components/Map';
 import { useState, useEffect } from 'react';
 import InputField from './components/InputField';
 import List from './components/List';
+import DummyMap from './DummyMap';
 import Progress from './components/Progress';
-
+import { permittedAnswers } from './components/permitted';
 function App() {
   const [knownCountries, setKnownCountries] = useState([]);
 
@@ -18,17 +19,29 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <div className="flex flex-col justify-evenly h-full py-2 border-4">
-        <div className="border-2 border-black m-2 rounded-xl w-[820px] h-[550px] overflow-hidden shadow-md relative bg-orange-50 ">
+    <div className="flex flex-row App">
+      <div className="flex-1 h-full bg-red-200"></div>
+      <div className="flex flex-col h-full">
+        <div className="flex-1 w-full bg-red-300"></div>
+        <div className="border-2 border-black m-2 rounded-xl w-[820px] h-[550px] overflow-hidden shadow-md relative bg-orange-50">
           <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
           <Map />
           <Progress knownCountries={knownCountries} />
         </div>
+        <div className="flex-1 w-full bg-red-400"></div>
       </div>
-      <div className="flex flex-col flex-wrap  w-1/2 pl-2 h-full ">
-        <List knownCountries={knownCountries} />
-      </div>
+      <div className="flex-1 h-full bg-red-100"></div>
+
+      {/* {permittedAnswers
+        // .filter((e) => e.picked === true)
+        .sort()
+        .map((item) => {
+          return (
+            <span className="border-[.005em] border-black m-1 text-xs  text-center block p-1 rounded-lg shadow-md absolute top-0 m-4">
+              {item.country.replace(' and ', ' & ')}
+            </span>
+          );
+        })} */}
     </div>
   );
 }
