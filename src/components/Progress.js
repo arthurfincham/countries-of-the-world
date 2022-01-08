@@ -7,7 +7,11 @@ export default function Progress({ knownCountries }) {
   return (
     <div className="absolute h-[95%] right-4">
       <div className="relative w-8 h-full bg-gray-100 border-2 border-black rounded-lg">
-        <div style={progressWidth} className="absolute bottom-0 block w-full pt-1 font-bold text-center text-white bg-orange-900 rounded-md">
+        <div
+          style={progressWidth}
+          className="absolute bottom-0 block w-full pt-1 font-bold text-center text-white bg-orange-900 rounded-md"
+          id="progressCount"
+        >
           {knownCountries.length}
         </div>
       </div>
