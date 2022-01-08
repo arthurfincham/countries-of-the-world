@@ -72,3 +72,7 @@ path {
   flex-direction: column;
   width: 60%;
 }
+
+.textWhite {
+  color: white;
+}

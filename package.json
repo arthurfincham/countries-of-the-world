@@ -4,11 +4,6 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@mui/icons-material": "^5.2.5",
-    "@mui/material": "^5.2.7",
-    "@mui/styled-engine-sc": "^5.1.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@react-hook/window-size": "^3.0.7",
     "@svgr/webpack": "^6.1.2",
