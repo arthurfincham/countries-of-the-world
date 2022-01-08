@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
+    "@ramonak/react-progress-bar": "^4.2.0",
     "@react-hook/window-size": "^3.0.7",
     "@svgr/webpack": "^6.1.2",
     "@testing-library/jest-dom": "^5.16.1",

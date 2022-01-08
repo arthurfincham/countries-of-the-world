@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { permittedAnswers } from './permitted';
 import { inputStandard } from './inputFunctions/inputStandard';
 export default function InputField({ knownCountries, setKnownCountries }) {
@@ -27,7 +26,7 @@ export default function InputField({ knownCountries, setKnownCountries }) {
       placeholder="Country"
       onChange={(e) => checkAnswer(e)}
       onKeyDown={(e) => checkKeyDown(e)}
-      className="border-4 border-black w-1/2 h-[50px] p-4 rounded-lg"
+      className="border-2 border-black bg-white  h-[50px] p-4 rounded-lg focus:outline-none   m-2 absolute z-10 "
     />
   );
 }

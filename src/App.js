@@ -2,6 +2,7 @@ import Map from './components/Map';
 import { useState, useEffect } from 'react';
 import InputField from './components/InputField';
 import List from './components/List';
+import Progress from './components/Progress';
 
 function App() {
   const [knownCountries, setKnownCountries] = useState([]);
@@ -18,13 +19,14 @@ function App() {
 
   return (
     <div className="App">
-      <div className="flex flex-col">
-        <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
-        <div className="border-4 w-[820px] h-[550px] overflow-hidden">
+      <div className="flex flex-col justify-evenly h-full py-2 border-4">
+        <div className="border-2 border-black m-2 rounded-xl w-[820px] h-[550px] overflow-hidden shadow-md relative bg-orange-50 ">
+          <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
           <Map />
+          <Progress knownCountries={knownCountries} />
         </div>
       </div>
-      <div className="flex flex-col flex-wrap border-4 w-1/2 p-4 pr-0 h-full">
+      <div className="flex flex-col flex-wrap  w-1/2 pl-2 h-full ">
         <List knownCountries={knownCountries} />
       </div>
     </div>
