@@ -5,7 +5,7 @@ export default function Progress({ knownCountries }) {
     minHeight: '4%',
   };
   return (
-    <div className="absolute h-[95%] right-4">
+    <div className="absolute h-[95%] right-4" data-testid="progressBar">
       <div className="relative w-8 h-full bg-gray-100 border-2 border-black rounded-lg">
         <div
           style={progressWidth}

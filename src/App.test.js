@@ -17,6 +17,16 @@ describe('App', () => {
     expect(screen.getByRole('textbox')).toBeInTheDocument();
   });
 
+  test('progress bar renders on load', () => {
+    render(<App />);
+    expect(screen.getByTestId('progressBar')).toBeInTheDocument();
+  });
+
+  test('svg renders on load', () => {
+    render(<App />);
+    expect(screen.getByTestId('svgMap')).toBeInTheDocument();
+  });
+
   test('clears if a correct name is entered', () => {
     const { input } = setup();
     fireEvent.change(input, { target: { value: 'France' } });
