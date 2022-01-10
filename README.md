@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src='public/country.png' width="100px">
+
 # Countries of the World Quiz
 
 ## [Live Preview](https://countries-of-the-world-gules.vercel.app/)
@@ -12,13 +14,8 @@
 
 #### Table of Contents
 
-- [Motivation](#Motivation)
 - [Features](#Features)
 - [Stack](#Stack)
-
-## Motivation
-
-Having always been interested in maps, I wanted to create quiz which dynamically updates an SVG-based map.
 
 ## Features:
 
@@ -37,15 +34,27 @@ I'd like my answers to be highlighted on the map.
 
 &nbsp;
 
-A javascript query selector find the relevant SVG path by title and then updates its color.
+A correct answer is added to an array. Iterating over this array, we look for a SVG path that matches...
+
+```javascript
+document.querySelector(`[title="${item.country}"]`);
+```
+
+...the color is then updated.
+
+```javascript
+document.querySelector(`[title="${item.country}"]`).style.fill = '#FA8F02';
+```
 
 #### Progress wheels for total and each continent
 
 <div align="center">
 
 ```
+
 So that I can see my progress,
 I'd like to know how many countries I have left.
+
 ```
 
 <img src="public/gifs/toggleMapPreview.gif" height="500">
@@ -54,15 +63,26 @@ I'd like to know how many countries I have left.
 
 &nbsp;
 
-I used Material UI circular progress bars as the icons for the Material UI Speed Dial component.
+This feature is a combination of two Material UI components:
+
+- `<SpeedDial />`
+- `<CircularProgress />`
+
+I passed the latter as the icon param for the SpeedDial like so:
+
+```javascript
+<SpeedDialAction icon={<CircularProgress name="Asia" />}...
+```
 
 ### Zoom and panning
 
 <div align="center">
 
 ```
+
 So that I can see the map clearly,
 I'd like to zoom in and pan.
+
 ```
 
 <img src="public/gifs/mainMapPreview.gif" width="500">
@@ -80,3 +100,11 @@ I used a package called [react-zoom-pan-pinch](https://github.com/prc5/react-zoo
 - Material UI
 - Tailwind CSS
 - Vercel
+
+| Tool                                                                                                                                                             |                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" height="auto" width="50">                          | React           |
+| <img src="https://testing-library.com/img/octopus-128x128.png" height="auto" width="50">                                                                         | Testing Library |
+| <img src="https://mui.com/static/logo.png" height="auto" width="50">                                                                                             | Material UI     |
+| <img src="https://yt3.ggpht.com/ikv41jMTr1uHGdILrJhvbfVJcDt4oqhwApKX37TjAleF_cRPbF2W-waj7uMnS5JySvnlvAlTCg=s900-c-k-c0x00ffffff-no-rj" height="auto" width="50"> | Tailwind CSS    |
+| <img src="https://assets-global.website-files.com/5f217a8e6bc2c82a9d803089/5f217a8e6bc2c80d3780360e_CBm5_MB7_400x400.jpg" height="auto" width="50">              | Vercel          |
