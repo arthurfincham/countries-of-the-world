@@ -14,12 +14,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+@font-face {
+  font-family: 'Tuesday';
+  src: local('Tuesday'), url('./fonts/Tuesday/Tuesday.ttf') format('truetype');
+}
+
 html,
 body,
 #root,
 .App {
   height: 100%;
   width: 100%;
+  background-color: #ebebeb;
 }
 
 .App {

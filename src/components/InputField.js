@@ -21,12 +21,14 @@ export default function InputField({ knownCountries, setKnownCountries }) {
   };
 
   return (
-    <input
-      type="text"
-      placeholder="Country"
-      onChange={(e) => checkAnswer(e)}
-      onKeyDown={(e) => checkKeyDown(e)}
-      className="border-2 border-black bg-white  h-[50px] p-4 rounded-lg focus:outline-none top-2 left-2  m-2 absolute z-10 "
-    />
+    <div className="absolute z-10 w-1/6 p-2 rounded-lg shadow-lg inputWrapper shadow-gray-500/40 top-2 left-2">
+      <input
+        type="text"
+        placeholder="Country"
+        onChange={(e) => checkAnswer(e)}
+        onKeyDown={(e) => checkKeyDown(e)}
+        className=" outline-white  z-10 bg-white  h-[50px] p-4 rounded-lg focus:outline-none  w-full  "
+      />
+    </div>
   );
 }
