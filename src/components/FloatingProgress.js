@@ -3,6 +3,7 @@ import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import CircleProgress from './CircleProgress';
+import TotalProgress from './TotalProgress';
 
 export default function FloatingProgress({ knownCountries }) {
   const [open, setOpen] = React.useState(false);
@@ -26,16 +27,37 @@ export default function FloatingProgress({ knownCountries }) {
       height: '6vh',
       overflow: 'hidden',
     },
+    '& .MuiSpeedDialAction-staticTooltipLabel': {
+      whiteSpace: 'nowrap',
+      fontSize: '.8em',
+      padding: '.3em .5em',
+    },
+  };
+
+  const toggleStyling = {
+    position: 'absolute',
+    top: 24,
+    right: 24,
+
+    '& .MuiSpeedDial-fab': {
+      height: '8vh',
+      width: '8vh',
+      backgroundColor: 'white',
+      overflow: 'hidden',
+    },
+    '& .MuiSpeedDial-fab:hover': {
+      backgroundColor: '#EBEBEB',
+    },
   };
 
   return (
     <SpeedDial
       ariaLabel="SpeedDial tooltip example"
-      sx={{ position: 'absolute', top: 24, right: 24 }}
-      icon={<SpeedDialIcon />}
+      icon={<TotalProgress knownCountries={knownCountries} />}
       onClick={handleClick}
       open={open}
       direction="down"
+      sx={toggleStyling}
     >
       {actions.map((action) => (
         <SpeedDialAction key={action.name} icon={action.icon} tooltipTitle={action.name} tooltipOpen onClick={handleClick} sx={buttonStyling} />

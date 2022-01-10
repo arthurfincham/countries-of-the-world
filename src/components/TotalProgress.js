@@ -5,12 +5,12 @@ import Box from '@mui/material/Box';
 import { permittedAnswers } from './permitted';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-export default function CircleProgress({ name, knownCountries }) {
-  const max = permittedAnswers.filter((e) => e.continent === name).length;
+export default function TotalProgress({ knownCountries }) {
+  const max = permittedAnswers.length;
 
   const normalise = (value) => ((value - 0) * 100) / (max - 0);
 
-  const current = knownCountries.filter((e) => e.continent === name).length;
+  const current = knownCountries.length;
 
   const complete = current === max;
 
@@ -26,7 +26,7 @@ export default function CircleProgress({ name, knownCountries }) {
 
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" value={normalise(current)} size={60} thickness={6} />
+      <CircularProgress variant="determinate" value={normalise(current)} size={71} thickness={5} />
       <Box
         sx={{
           top: 0,
