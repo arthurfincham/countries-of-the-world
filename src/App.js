@@ -1,8 +1,9 @@
 import Map from './components/Map';
 import { useState, useEffect } from 'react';
 import InputField from './components/InputField';
-import Progress from './components/Progress';
+import FloatingProgress from './components/FloatingProgress';
 import ReactTooltip from 'react-tooltip';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 
 function App() {
   const [knownCountries, setKnownCountries] = useState([]);
@@ -20,12 +21,20 @@ function App() {
       });
   });
 
+  const theme = createTheme({
+    palette: {
+      primary: { main: '#FA8F02' },
+    },
+  });
+
   return (
     <div className="relative flex flex-row App">
-      <ReactTooltip className="tooltip" />
-      <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
-      <Map />
-      <Progress knownCountries={knownCountries} />
+      <ThemeProvider theme={theme}>
+        <ReactTooltip className="tooltip" />
+        <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
+        <Map />
+        <FloatingProgress knownCountries={knownCountries} />
+      </ThemeProvider>
     </div>
   );
 }
