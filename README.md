@@ -95,12 +95,6 @@ I used a package called [react-zoom-pan-pinch](https://github.com/prc5/react-zoo
 
 ## Stack
 
-- React
-- Testing Library
-- Material UI
-- Tailwind CSS
-- Vercel
-
 | Tool                                                                                                                                                             |                 |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" height="auto" width="50">                          | React           |
