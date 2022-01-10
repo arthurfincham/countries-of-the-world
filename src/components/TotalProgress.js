@@ -4,8 +4,9 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { permittedAnswers } from './permitted';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 
-export default function TotalProgress({ knownCountries }) {
+export default function TotalProgress({ knownCountries, open }) {
   const max = permittedAnswers.length;
 
   const normalise = (value) => ((value - 0) * 100) / (max - 0);
@@ -24,6 +25,7 @@ export default function TotalProgress({ knownCountries }) {
 
   const bgCol = complete ? '#FA8F02' : 'none';
 
+  const openIcon = complete ? finishIcon : counter;
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
       <CircularProgress variant="determinate" value={normalise(current)} size={71} thickness={5} />
@@ -40,7 +42,7 @@ export default function TotalProgress({ knownCountries }) {
           backgroundColor: bgCol,
         }}
       >
-        {complete ? finishIcon : counter}
+        {open ? openIcon : <SpeedDialIcon />}
       </Box>
     </Box>
   );

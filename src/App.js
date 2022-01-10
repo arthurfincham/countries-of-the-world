@@ -8,7 +8,7 @@ import { permittedAnswers } from './components/permitted';
 import { dummyAnswers } from './components/dummyKnownData';
 
 function App() {
-  const [knownCountries, setKnownCountries] = useState(dummyAnswers);
+  const [knownCountries, setKnownCountries] = useState([]);
 
   useEffect(() => {
     knownCountries

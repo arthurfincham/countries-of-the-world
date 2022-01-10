@@ -53,7 +53,7 @@ export default function FloatingProgress({ knownCountries }) {
   return (
     <SpeedDial
       ariaLabel="SpeedDial tooltip example"
-      icon={<TotalProgress knownCountries={knownCountries} />}
+      icon={<TotalProgress knownCountries={knownCountries} open={open} />}
       onClick={handleClick}
       open={open}
       direction="down"
