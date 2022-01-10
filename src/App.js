@@ -15,9 +15,10 @@ function App() {
       .filter((item) => item.picked === true)
       .map((item) => {
         if (document.querySelector(`[title="${item.country}"]`)) {
+          const tipName = item.country;
           document.querySelectorAll(`[title="${item.country}"]`).forEach((item) => {
             item.style.fill = '#FA8F02';
-            item.setAttribute('data-tip', item.country);
+            item.setAttribute('data-tip', tipName);
           });
 
           ReactTooltip.rebuild();
