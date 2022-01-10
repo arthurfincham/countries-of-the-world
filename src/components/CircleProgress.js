@@ -26,7 +26,7 @@ export default function CircleProgress({ name, knownCountries }) {
 
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" value={normalise(current)} size={60} thickness={6} />
+      <CircularProgress variant="determinate" value={normalise(current)} size={60} thickness={8} />
       <Box
         sx={{
           top: 0,

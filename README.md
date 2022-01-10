@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Countries of the World Quiz
 
-## Available Scripts
+## [Live Preview](https://countries-of-the-world-gules.vercel.app/)
 
-In the project directory, you can run:
+![](https://img.shields.io/github/last-commit/arthurfincham/countries-of-the-world)
+![](https://img.shields.io/github/languages/count/arthurfincham/countries-of-the-world)
+![](https://img.shields.io/github/languages/code-size/arthurfincham/countries-of-the-world)
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Motivation](#Motivation)
+- [Features](#Features)
+- [Stack](#Stack)
 
-### `npm test`
+## Motivation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Having always been interested in maps, I wanted to create quiz which dynamically updates an SVG-based map.
 
-### `npm run build`
+## Features:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Dynamic update of map
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div align="center">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+So that I can keep track of my answers,
+I'd like my answers to be highlighted on the map.
+```
 
-### `npm run eject`
+<img src="public/gifs/typingMapPreview.gif" width="500">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+</div>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+&nbsp;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A javascript query selector find the relevant SVG path by title and then updates its color.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Progress wheels for total and each continent
 
-## Learn More
+<div align="center">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+So that I can see my progress,
+I'd like to know how many countries I have left.
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="public/gifs/toggleMapPreview.gif" height="500">
 
-### Code Splitting
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+&nbsp;
 
-### Analyzing the Bundle Size
+I used Material UI circular progress bars as the icons for the Material UI Speed Dial component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Zoom and panning
 
-### Making a Progressive Web App
+<div align="center">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+So that I can see the map clearly,
+I'd like to zoom in and pan.
+```
 
-### Advanced Configuration
+<img src="public/gifs/mainMapPreview.gif" width="500">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+</div>
 
-### Deployment
+&nbsp;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+I used a package called [react-zoom-pan-pinch](https://github.com/prc5/react-zoom-pan-pinch) to move around the SVG.
 
-### `npm run build` fails to minify
+## Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- Testing Library
+- Material UI
+- Tailwind CSS
+- Vercel
