@@ -28,7 +28,7 @@ export default function TotalProgress({ knownCountries, open }) {
   const openIcon = complete ? finishIcon : counter;
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" value={normalise(current)} size={71} thickness={5} />
+      <CircularProgress variant="determinate" value={normalise(current)} size={71} thickness={5} data-testid="progressBar" />
       <Box
         sx={{
           top: 0,
