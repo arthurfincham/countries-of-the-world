@@ -3,9 +3,7 @@ import { useState, useEffect } from 'react';
 import InputField from './components/InputField';
 import FloatingProgress from './components/FloatingProgress';
 import ReactTooltip from 'react-tooltip';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import { permittedAnswers } from './components/permitted';
-import { dummyAnswers } from './components/dummyKnownData';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function App() {
   const [knownCountries, setKnownCountries] = useState([]);

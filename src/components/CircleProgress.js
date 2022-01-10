@@ -20,7 +20,7 @@ export default function CircleProgress({ name, knownCountries }) {
     </Typography>
   );
 
-  const finishIcon = <CheckCircleOutlineIcon color="white" />;
+  const finishIcon = <CheckCircleOutlineIcon sx={{ fill: 'white', fontSize: '3em' }} />;
 
   const bgCol = complete ? '#FA8F02' : 'none';
 
