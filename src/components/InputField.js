@@ -21,7 +21,7 @@ export default function InputField({ knownCountries, setKnownCountries }) {
   };
 
   return (
-    <div className="absolute z-10 w-1/6 p-2 rounded-lg shadow-lg inputWrapper shadow-gray-500/40 top-2 left-2">
+    <div className="absolute z-10 w-1/6  rounded-lg shadow-lg inputWrapper shadow-gray-500/40 top-6 left-5 min-w-[300px] border-4 border-orange-900">
       <input
         type="text"
         placeholder="Country"
