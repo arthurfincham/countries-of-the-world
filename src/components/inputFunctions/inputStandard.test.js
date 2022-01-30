@@ -15,4 +15,9 @@ describe('inputStandard', () => {
     const example = inputStandard('united states of america');
     expect(example).toBe('United States of America');
   });
+
+  it('removes white space from start of input', () => {
+    const example = inputStandard('  italy');
+    expect(example).toBe('Italy');
+  });
 });

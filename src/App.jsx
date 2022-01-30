@@ -1,5 +1,5 @@
 import Map from './components/Map';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputField from './components/InputField';
 import FloatingProgress from './components/FloatingProgress';
 import ReactTooltip from 'react-tooltip';
@@ -14,10 +14,12 @@ function App() {
       .map((item) => {
         if (document.querySelector(`[title="${item.country}"]`)) {
           const tipName = item.country;
-          document.querySelectorAll(`[title="${item.country}"]`).forEach((item) => {
-            item.style.fill = '#FA8F02';
-            item.setAttribute('data-tip', tipName);
-          });
+          document
+            .querySelectorAll(`[title="${item.country}"]`)
+            .forEach((item) => {
+              item.style.fill = '#FA8F02';
+              item.setAttribute('data-tip', tipName);
+            });
 
           ReactTooltip.rebuild();
         }
@@ -34,7 +36,10 @@ function App() {
     <div className="relative flex flex-row App">
       <ThemeProvider theme={theme}>
         <ReactTooltip className="tooltip" />
-        <InputField knownCountries={knownCountries} setKnownCountries={setKnownCountries} />
+        <InputField
+          knownCountries={knownCountries}
+          setKnownCountries={setKnownCountries}
+        />
         <Map />
         <FloatingProgress knownCountries={knownCountries} />
       </ThemeProvider>

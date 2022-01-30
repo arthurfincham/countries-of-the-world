@@ -1,3 +1,4 @@
+import React from 'react';
 import { permittedAnswers } from './permitted';
 import { inputStandard } from './inputFunctions/inputStandard';
 export default function InputField({ knownCountries, setKnownCountries }) {
@@ -6,7 +7,9 @@ export default function InputField({ knownCountries, setKnownCountries }) {
       const string = inputStandard(e.target.value);
       if (permittedAnswers.some((e) => e.country === string)) {
         e.preventDefault();
-        const selectedCountry = permittedAnswers.filter((e) => e.country === string)[0];
+        const selectedCountry = permittedAnswers.filter(
+          (e) => e.country === string,
+        )[0];
         if (selectedCountry.picked === false) {
           selectedCountry.picked = true;
           setKnownCountries([...knownCountries, selectedCountry]);
